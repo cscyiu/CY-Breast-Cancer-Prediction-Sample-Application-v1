@@ -1,4 +1,4 @@
 applications:
-- name: node-hello-world
+- name: node-breast-cancer-prediction
   memory: 128M
   buildpack: sdk-for-nodejs

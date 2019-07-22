@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/header %>
+</header>
+
+<main>
+    <div class="jumbotron">
+		<div class="container text-center">
+        <h2>Welcome to the Breast Cancer Prediction Application</h2>   
+		</div>
+    </div>
+    
+    <p>Pending Prediction Response </p>
+
+	<% include ../utilities/parseWatsonMLResponse %>
+	
+	<p> Actual Raw Response: <%= WMLFinalResponse %> </p>
+	<!-- DEBUG
+    
+    <p> Field Headers: <%= JSON.parse(WMLFinalResponse).fields %> </p>
+    <p> Total Number of Prediction Values: <%= JSON.parse(WMLFinalResponse).values.length %> </p>
+    <p> Actual Prediction Results Values: <%= JSON.parse(WMLFinalResponse).values[0].length %> </p>	
+    -->
+    
+</main>
+
+<footer>
+    <% include ../partials/footer %>
+</footer>
+
+</body>
+</html>
